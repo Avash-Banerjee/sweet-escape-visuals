@@ -4,6 +4,7 @@ import SignatureGrid from "@/components/SignatureGrid";
 import CafeExperience from "@/components/CafeExperience";
 import MenuShowcase from "@/components/MenuShowcase";
 import ComboSpecials from "@/components/ComboSpecials";
+import Reviews from "@/components/Reviews";
 import InstagramWall from "@/components/InstagramWall";
 import CommunitySection from "@/components/CommunitySection";
 import VisitUs from "@/components/VisitUs";
@@ -18,6 +19,7 @@ const Index = () => {
       <CafeExperience />
       <MenuShowcase />
       <ComboSpecials />
+      <Reviews />
       <InstagramWall />
       <CommunitySection />
       <VisitUs />
