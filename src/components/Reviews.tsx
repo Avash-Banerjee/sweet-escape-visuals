@@ -27,67 +27,76 @@ const Reviews = () => {
   const headerRef = useRef(null);
   const headerInView = useInView(headerRef, { once: true });
 
+  // Duplicate the reviews array to create a seamless infinite loop
+  const duplicatedReviews = [...reviews, ...reviews, ...reviews];
+
   return (
-    <section className="py-24 px-6 bg-warm-beige bg-grain">
+    <section className="py-12 md:py-24 px-4 bg-warm-beige bg-grain overflow-hidden">
       <div className="container mx-auto max-w-5xl">
         <motion.div
           ref={headerRef}
           initial={{ opacity: 0, y: 30 }}
           animate={headerInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8 }}
-          className="text-center mb-16"
+          className="text-center mb-10 md:mb-16"
         >
           <p className="text-accent font-sans text-sm tracking-[0.3em] uppercase mb-3">Testimonials</p>
-          <h2 className="font-serif text-4xl md:text-5xl text-foreground">What People Say</h2>
+          <h2 className="font-serif text-3xl md:text-5xl text-foreground">What People Say</h2>
         </motion.div>
 
-        <div className="grid md:grid-cols-3 gap-8">
-          {reviews.map((review, i) => (
-            <ReviewCard key={i} review={review} index={i} />
-          ))}
+        {/* Carousel Container */}
+        <div className="relative flex overflow-hidden py-4">
+          <motion.div
+            className="flex gap-6 pr-6"
+            animate={{
+              x: [0, -1035], // Adjust this number based on card width + gap
+            }}
+            transition={{
+              x: {
+                repeat: Infinity,
+                repeatType: "loop",
+                duration: 25, // Higher = slower movement
+                ease: "linear",
+              },
+            }}
+            // Pause on hover for readability
+            whileHover={{ animationPlayState: "paused" }}
+          >
+            {duplicatedReviews.map((review, i) => (
+              <ReviewCard key={i} review={review} />
+            ))}
+          </motion.div>
         </div>
       </div>
     </section>
   );
 };
 
-const ReviewCard = ({ review, index }: { review: typeof reviews[0]; index: number }) => {
-  const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, margin: "-40px" });
-
+const ReviewCard = ({ review }: { review: typeof reviews[0] }) => {
   return (
-    <motion.div
-      ref={ref}
-      initial={{ opacity: 0, y: 40 }}
-      animate={isInView ? { opacity: 1, y: 0 } : {}}
-      transition={{ duration: 0.6, delay: index * 0.15 }}
-      // Reduced mobile padding (p-5) and used md:p-8 for desktop
-      className="bg-card rounded-lg p-5 md:p-8 shadow-md flex flex-col items-center text-center"
-    >
-      {/* Reduced Avatar size on mobile (w-10 h-10) */}
-      <div className="w-10 h-10 md:w-14 md:h-14 rounded-full bg-primary flex items-center justify-center mb-3 md:mb-5">
+    <div className="bg-card rounded-lg p-5 md:p-8 shadow-md flex flex-col items-center text-center w-[280px] md:w-[320px] shrink-0">
+      <div className="w-10 h-10 md:w-14 md:h-14 rounded-full bg-primary flex items-center justify-center mb-3">
         <span className="font-serif text-sm md:text-lg text-primary-foreground">{review.initials}</span>
       </div>
 
-      {/* Tightened Stars margin */}
-      <div className="flex gap-1 mb-2 md:mb-4">
+      <div className="flex gap-1 mb-2">
         {Array.from({ length: 5 }).map((_, i) => (
           <Star
             key={i}
-            size={14} // Slightly smaller stars
+            size={14}
             className={i < review.rating ? "fill-accent text-accent" : "text-muted"}
           />
         ))}
       </div>
 
-      {/* Quote: Reduced bottom margin and used line-clamp for consistency */}
-      <p className="font-sans text-xs md:text-sm leading-relaxed text-muted-foreground mb-3 md:mb-6 italic">
+      <p className="font-sans text-xs md:text-sm leading-relaxed text-muted-foreground mb-3 italic">
         "{review.text}"
       </p>
 
-      {/* Name */}
-      <p className="font-serif text-sm md:text-base text-foreground font-medium">{review.name}</p>
-    </motion.div>
+      <p className="font-serif text-sm md:text-base text-foreground font-medium mt-auto">
+        {review.name}
+      </p>
+    </div>
   );
 };
 
