@@ -38,7 +38,7 @@ const Navbar = () => {
               scrolled ? "text-primary" : "text-warm-cream"
             }`}
           >
-            Calcutta Bakery
+            Calcutta Bakery Cafe
           </button>
 
           {/* Desktop Links */}
