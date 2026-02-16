@@ -29,16 +29,16 @@ const VisitUs = () => {
             transition={{ duration: 0.8 }}
             className="rounded-xl overflow-hidden shadow-lg h-[400px]"
           >
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3684.0!2d88.35!3d22.57!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjLCsDM0JzEyLjAiTiA4OMKwMjEnMDAuMCJF!5e0!3m2!1sen!2sin!4v1700000000000"
-              width="100%"
-              height="100%"
-              style={{ border: 0 }}
-              allowFullScreen
-              loading="lazy"
-              referrerPolicy="no-referrer-when-downgrade"
-              title="Calcutta Bakery & Café location"
-            />
+<iframe
+  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3683.945419985956!2d88.40693527589632!3d22.581137932328135!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a0275b954c8f7d9%3A0x989c6a3449139014!2sCalcutta%20Bakery%20Cafe!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin"
+  width="100%"
+  height="100%"
+  style={{ border: 0 }}
+  allowFullScreen
+  loading="lazy"
+  referrerPolicy="no-referrer-when-downgrade"
+  title="Calcutta Bakery & Café location"
+/>
           </motion.div>
 
           {/* Info card - styled like a postcard */}
@@ -61,7 +61,7 @@ const VisitUs = () => {
                 <MapPin className="text-accent shrink-0 mt-1" size={20} />
                 <div>
                   <p className="font-sans font-medium text-foreground">Address</p>
-                  <p className="text-muted-foreground text-sm">Park Street, Kolkata, West Bengal 700016</p>
+                  <p className="text-muted-foreground text-sm">Ground floor, BD 97, Salt Lake Rd, BD Block, Sector 1, Bidhannagar, Kolkata, West Bengal 700064</p>
                 </div>
               </div>
 
@@ -69,8 +69,8 @@ const VisitUs = () => {
                 <Clock className="text-accent shrink-0 mt-1" size={20} />
                 <div>
                   <p className="font-sans font-medium text-foreground">Opening Hours</p>
-                  <p className="text-muted-foreground text-sm">Mon – Sat: 8:00 AM – 10:00 PM</p>
-                  <p className="text-muted-foreground text-sm">Sunday: 9:00 AM – 9:00 PM</p>
+                  <p className="text-muted-foreground text-sm">Mon – Sun: 9:00 AM – 10:30 PM</p>
+
                 </div>
               </div>
 
@@ -78,7 +78,7 @@ const VisitUs = () => {
                 <Phone className="text-accent shrink-0 mt-1" size={20} />
                 <div>
                   <p className="font-sans font-medium text-foreground">Phone</p>
-                  <p className="text-muted-foreground text-sm">+91 98765 43210</p>
+                  <p className="text-muted-foreground text-sm">096743 91609</p>
                 </div>
               </div>
 

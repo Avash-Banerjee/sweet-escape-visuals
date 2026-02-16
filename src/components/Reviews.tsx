@@ -61,31 +61,32 @@ const ReviewCard = ({ review, index }: { review: typeof reviews[0]; index: numbe
       initial={{ opacity: 0, y: 40 }}
       animate={isInView ? { opacity: 1, y: 0 } : {}}
       transition={{ duration: 0.6, delay: index * 0.15 }}
-      className="bg-card rounded-lg p-8 shadow-md flex flex-col items-center text-center"
+      // Reduced mobile padding (p-5) and used md:p-8 for desktop
+      className="bg-card rounded-lg p-5 md:p-8 shadow-md flex flex-col items-center text-center"
     >
-      {/* Avatar */}
-      <div className="w-14 h-14 rounded-full bg-primary flex items-center justify-center mb-5">
-        <span className="font-serif text-lg text-primary-foreground">{review.initials}</span>
+      {/* Reduced Avatar size on mobile (w-10 h-10) */}
+      <div className="w-10 h-10 md:w-14 md:h-14 rounded-full bg-primary flex items-center justify-center mb-3 md:mb-5">
+        <span className="font-serif text-sm md:text-lg text-primary-foreground">{review.initials}</span>
       </div>
 
-      {/* Stars */}
-      <div className="flex gap-1 mb-4">
+      {/* Tightened Stars margin */}
+      <div className="flex gap-1 mb-2 md:mb-4">
         {Array.from({ length: 5 }).map((_, i) => (
           <Star
             key={i}
-            size={16}
+            size={14} // Slightly smaller stars
             className={i < review.rating ? "fill-accent text-accent" : "text-muted"}
           />
         ))}
       </div>
 
-      {/* Quote */}
-      <p className="font-sans text-sm leading-relaxed text-muted-foreground mb-6 italic">
+      {/* Quote: Reduced bottom margin and used line-clamp for consistency */}
+      <p className="font-sans text-xs md:text-sm leading-relaxed text-muted-foreground mb-3 md:mb-6 italic">
         "{review.text}"
       </p>
 
       {/* Name */}
-      <p className="font-serif text-base text-foreground font-medium">{review.name}</p>
+      <p className="font-serif text-sm md:text-base text-foreground font-medium">{review.name}</p>
     </motion.div>
   );
 };

@@ -31,12 +31,12 @@ const CommunitySection = () => {
           <h2 className="font-serif text-4xl md:text-5xl text-foreground">Moments at the Café</h2>
         </motion.div>
 
-        {/* Polaroid-style grid */}
-        <div className="flex flex-wrap justify-center gap-8 md:gap-12">
-          {moments.map((moment, i) => (
-            <PolaroidCard key={i} moment={moment} index={i} />
-          ))}
-        </div>
+        {/* Responsive Grid: 2 columns on mobile, auto-flow on larger screens */}
+<div className="grid grid-cols-2 lg:flex lg:flex-wrap lg:justify-center gap-4 md:gap-12">
+  {moments.map((moment, i) => (
+    <PolaroidCard key={i} moment={moment} index={i} />
+  ))}
+</div>
       </div>
     </section>
   );

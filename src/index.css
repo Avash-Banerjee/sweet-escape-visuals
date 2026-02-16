@@ -6,17 +6,22 @@
 
 @layer base {
   :root {
-    --background: 30 25% 96%;
-    --foreground: 24 10% 10%;
+/* Richer Creamy Background (Warmer Latte tone) */
+    --background: 34 35% 92%; 
+    --foreground: 24 20% 15%
 
-    --card: 33 30% 94%;
+    --card: 34 30% 88%;
     --card-foreground: 24 10% 10%;
+
+    --warm-cream: 34 40% 94%;
+    --warm-beige: 33 30% 85%;
 
     --popover: 30 25% 96%;
     --popover-foreground: 24 10% 10%;
 
-    --primary: 24 60% 23%;
-    --primary-foreground: 36 45% 95%;
+/* Deep Coffee Brown for primary text/buttons */
+    --primary: 20 40% 18%; 
+    --primary-foreground: 36 45% 95%
 
     --secondary: 33 25% 88%;
     --secondary-foreground: 24 40% 18%;

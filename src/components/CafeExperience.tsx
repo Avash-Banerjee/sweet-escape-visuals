@@ -1,9 +1,9 @@
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 
-import cafeInterior1 from "@/assets/cafe-interior-1.jpg";
-import cafeInterior2 from "@/assets/cafe-interior-2.jpg";
-import cafeDecor1 from "@/assets/cafe-decor-1.jpg";
+import cafeInterior1 from "@/assets/warmthdecor1.webp";
+import cafeInterior2 from "@/assets/warmthdecor2.webp";
+import cafeDecor1 from "@/assets/mainpic.webp";
 
 const blocks = [
   {

@@ -3,25 +3,25 @@ import { useRef } from "react";
 import { Instagram } from "lucide-react";
 
 import cake1 from "@/assets/cake-1.jpg";
-import pastries1 from "@/assets/pastries-1.jpg";
-import coffee1 from "@/assets/coffee-1.jpg";
-import desserts1 from "@/assets/desserts-1.jpg";
-import cafeInterior1 from "@/assets/cafe-interior-1.jpg";
-import beverages1 from "@/assets/beverages-1.jpg";
-import breakfast1 from "@/assets/breakfast-1.jpg";
+import pastries1 from "@/assets/cozycorner.webp";
+import coffee1 from "@/assets/cofee2.webp";
+import desserts1 from "@/assets/nicedes.webp";
+import cafeInterior1 from "@/assets/bag1.webp";
+import beverages1 from "@/assets/bev3.webp";
+import breakfast1 from "@/assets/nicebreak.webp";
 import savory1 from "@/assets/savory-1.jpg";
-import combo1 from "@/assets/combo-1.jpg";
+import combo1 from "@/assets/savory2.webp";
 
 const images = [
   { src: cake1, caption: "Triple chocolate heaven 🍫" },
-  { src: pastries1, caption: "Morning croissants, fresh out ☀️" },
+  { src: pastries1, caption: "Festive Vibes ☀️" },
   { src: coffee1, caption: "The perfect pour ☕" },
   { src: desserts1, caption: "Dessert o'clock 🍰" },
   { src: cafeInterior1, caption: "Your cozy corner awaits 🛋️" },
-  { src: beverages1, caption: "Fresh & fruity vibes 🍓" },
+  { src: beverages1, caption: "Slurp it  up 🍹" },
   { src: breakfast1, caption: "Breakfast done right 🍳" },
   { src: savory1, caption: "Gourmet bites 🥪" },
-  { src: combo1, caption: "Gift boxes with love 🎁" },
+  { src: combo1, caption: "Aesthetic Pastas 🖤" },
 ];
 
 const InstagramWall = () => {

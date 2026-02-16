@@ -1,13 +1,13 @@
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 
-import breakfast1 from "@/assets/breakfast-1.jpg";
-import desserts1 from "@/assets/desserts-1.jpg";
-import beverages1 from "@/assets/beverages-1.jpg";
+import breakfast1 from "@/assets/breakfast11.jpeg";
+import desserts1 from "@/assets/nicecake.webp"
+import beverages1 from "@/assets/nicebev.webp";
 import savory1 from "@/assets/savory-1.jpg";
 
 const categories = [
-  { image: breakfast1, title: "Breakfast Spreads", description: "Start your day with golden toasts, eggs, and fresh juice" },
+  { image: breakfast1, title: "Breakfast Spreads", description: "Start your day with crisp bacons and eggs" },
   { image: desserts1, title: "Dessert Platters", description: "Indulge in curated dessert experiences" },
   { image: beverages1, title: "Beverage Selections", description: "From craft lattes to fresh smoothie bowls" },
   { image: savory1, title: "Savory Bites", description: "Gourmet sandwiches, bruschettas, and more" },

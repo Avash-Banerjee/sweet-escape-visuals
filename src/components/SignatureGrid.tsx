@@ -3,19 +3,19 @@ import { useInView } from "framer-motion";
 import { useRef } from "react";
 
 import cake1 from "@/assets/cake-1.jpg";
-import pastries1 from "@/assets/pastries-1.jpg";
+import pastries1 from "@/assets/meal2.webp";
 import coffee1 from "@/assets/coffee-1.jpg";
 import desserts1 from "@/assets/desserts-1.jpg";
-import cafeInterior1 from "@/assets/cafe-interior-1.jpg";
+import cafeInterior1 from "@/assets/nicedecor.webp";
 import beverages1 from "@/assets/beverages-1.jpg";
 
 const items = [
   { src: cake1, alt: "Rich chocolate layer cake", caption: "Signature Cakes", span: "row-span-2" },
-  { src: pastries1, alt: "Assorted croissants and pastries", caption: "Fresh Pastries", span: "" },
+  { src: pastries1, alt: "Assorted croissants and pastries", caption: "Wholesome Meals", span: "" },
   { src: coffee1, alt: "Latte art in ceramic cup", caption: "Specialty Coffee", span: "" },
-  { src: cafeInterior1, alt: "Cozy café corner with brick walls", caption: "Our Space", span: "" },
+  { src: cafeInterior1, alt: "Cozy café corner with brick walls", caption: "Photogenic Walls", span: "" },
   { src: desserts1, alt: "Elegant dessert platter", caption: "Sweet Indulgences", span: "" },
-  { src: beverages1, alt: "Fresh smoothie bowls", caption: "Refreshments", span: "col-span-2 md:col-span-1" },
+  
 ];
 
 const GridItem = ({ item, index }: { item: typeof items[0]; index: number }) => {
